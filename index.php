@@ -22,13 +22,25 @@ include("config.php");
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script type="text/javascript" >
         //garantie que le code jquery a l'interieur de la fonction ne exute entant que le DOM ne charger
+        $(document).ready(function(){
+            $("#live_search").keyup(function(){
+                var input = $(this).val();
+                if(input != ""){
+                    $.ajax({
+                        url:"livesearch.php",
+                        method:"POST",
+                        data:{input:input},
+                    })
+                }
+            })
+        })
     
                 // alert(input);
 
                 //permission de communicer de maniere asynchrone
                        
                         //exucuton si la requete ajax a reussi
-       
+       %
         
     </script>
     

@@ -3,6 +3,7 @@ include("config.php");
 if(isset($_POST['input'])){
     $input = $_POST['input'];
      //query
+     $query="SELECT * FROM searchperson WHERE name LIKE '{$input}%'";
     $result =mysqli_query($conn, $query);
     if(mysqli_num_rows($result) > 0){?>
     <table class="table table-bordered table-striped mt-4">
