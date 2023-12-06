@@ -25,25 +25,10 @@ include("config.php");
     
                 // alert(input);
 
-                if(input != ""){
-                    $.ajax({ //permission de communicer de maniere asynchrone
-                        url:"livesearch.php",
-                        method:"POST",
-                        data:{input:input},
+                //permission de communicer de maniere asynchrone
+                       
                         //exucuton si la requete ajax a reussi
-                        success:function(data){
-                            $("#searchresult").html(data); 
-                            
-                        }
-
-                    });
-                }else{
-                    $("#searchresult").css("display","none");
-                }
-            });
-
-
-        });
+       
         
     </script>
     
